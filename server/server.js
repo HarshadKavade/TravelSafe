@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 
 import connectDB from "./config/db.js";
 
-
+import tripRoutes from "./routes/tripRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 
 
@@ -25,7 +25,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 
-
+app.use("/api/trips", tripRoutes);
 /* =========================
    DATABASE
 ========================= */

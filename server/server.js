@@ -11,7 +11,7 @@ import authRoutes from "./routes/authRoutes.js";
 import routeRoutes from "./routes/routeRoutes.js";
 import sosRoutes from "./routes/sosRoutes.js";
 import alertRoutes from "./routes/alertRoutes.js";
-
+import recordingRoutes from "./routes/recordingRoutes.js";
 dotenv.config();
 
 const app = express();
@@ -31,7 +31,7 @@ app.use("/api/sos", sosRoutes);
 app.use("/api/trips", tripRoutes);
 app.use("/api/alerts", alertRoutes);
 app.use("/api/routes", routeRoutes);
-
+app.use("/api/recordings",recordingRoutes);
 connectDB();
 
 const PORT = process.env.PORT || 5000;
